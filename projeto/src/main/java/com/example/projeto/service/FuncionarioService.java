@@ -82,4 +82,8 @@ public class FuncionarioService {
         MensagemDTO vMensagemDTO = new MensagemDTO("OK", "Deletado com sucesso");
         return ResponseEntity.ok().body(vMensagemDTO);
     }
+
+    public ResponseEntity<List<Funcionario>> findAllDpto(Integer pIdDepto){
+        return ResponseEntity.ok().body(funcRepository.findByDepto(pIdDepto));
+    }
 }

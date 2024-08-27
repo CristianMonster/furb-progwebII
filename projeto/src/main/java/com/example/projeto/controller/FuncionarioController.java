@@ -56,4 +56,9 @@ public class FuncionarioController {
     public ResponseEntity<MensagemDTO> delFuncionario(@PathVariable Integer pIdFuncionario) {
         return funcService.delFunc(pIdFuncionario);
     }
+
+    @GetMapping("/departamento/pIdDepto")
+    public ResponseEntity<List<Funcionario>> findAllDpto(@PathVariable Integer pIdDepto) {
+        return funcService.findAllDpto(pIdDepto);
+    }
 }
